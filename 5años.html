@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn English - 5 Years Old</title>
+            <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .title {
+            font-size: 3em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite alternate;
+        }
+        
+        @keyframes bounce {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-10px); }
+        }
+        
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 5px solid #f39c12;
+        }
+        
+        .section h2 {
+            font-size: 2.5em;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .number-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 4px solid #ddd;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .number-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .number-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            border: 3px solid #333;
+            animation: pulse 2s infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .number-name {
+            font-size: 1.6em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #2c3e50;
+        }
+        
+        .emotions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .emotion-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 4px solid #ddd;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .emotion-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .emotion-face {
+            font-size: 5em;
+            margin-bottom: 15px;
+            animation: wiggle 1s ease-in-out infinite;
+        }
+        
+        @keyframes wiggle {
+            0%, 50%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+        }
+        
+        .emotion-name {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .food-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 4px solid #ddd;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .food-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .food-icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite alternate;
+        }
+        
+        .food-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .body-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .body-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 4px solid #ddd;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .body-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .body-icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+        }
+        
+        .body-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .play-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            font-family: 'Comic Sans MS', cursive;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        .play-button:hover {
+            background: #2980b9;
+            transform: scale(1.05);
+        }
+        
+        .feedback {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #2ecc71;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 15px;
+            font-size: 2em;
+            font-weight: bold;
+            display: none;
+            z-index: 1000;
+            animation: feedbackPop 0.5s ease-out;
+        }
+        
+        @keyframes feedbackPop {
+            0% { transform: translate(-50%, -50%) scale(0); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+        }
+        
+        .game-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: 5px solid #9b59b6;
+        }
+        
+        .game-section h2 {
+            color: white;
+        }
+        
+        .quiz-button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.5em;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+            font-family: 'Comic Sans MS', cursive;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        .quiz-button:hover {
+            background: #c0392b;
+            transform: scale(1.05);
+        }
+        
+        .quiz-question {
+            font-size: 2em;
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        
+        .stars {
+            font-size: 3em;
+            color: #f1c40f;
+            margin: 20px 0;
+        }
+        
+        .translate-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #9b59b6;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.1em;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Comic Sans MS', cursive;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .translate-button:hover {
+            background: #8e44ad;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="translate-button" onclick="toggleLanguage()">🌍 Español/English</button>
+        <h1 class="title" id="main-title">🔢 Learn English Numbers, Emotions, Food & Body! 🔢</h1>
+        
+        <!-- Numbers Section -->
+        <div class="section">
+            <h2>🔢 Numbers - Números</h2>
+            <div class="numbers-grid">
+                <div class="number-card" onclick="playNumberSound('one')">
+                    <div class="number-circle">1</div>
+                    <div class="number-name">One</div>
+                    <div style="font-size: 1.2em; color: #666;">Uno</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('two')">
+                    <div class="number-circle">2</div>
+                    <div class="number-name">Two</div>
+                    <div style="font-size: 1.2em; color: #666;">Dos</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('three')">
+                    <div class="number-circle">3</div>
+                    <div class="number-name">Three</div>
+                    <div style="font-size: 1.2em; color: #666;">Tres</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('four')">
+                    <div class="number-circle">4</div>
+                    <div class="number-name">Four</div>
+                    <div style="font-size: 1.2em; color: #666;">Cuatro</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('five')">
+                    <div class="number-circle">5</div>
+                    <div class="number-name">Five</div>
+                    <div style="font-size: 1.2em; color: #666;">Cinco</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('six')">
+                    <div class="number-circle">6</div>
+                    <div class="number-name">Six</div>
+                    <div style="font-size: 1.2em; color: #666;">Seis</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('seven')">
+                    <div class="number-circle">7</div>
+                    <div class="number-name">Seven</div>
+                    <div style="font-size: 1.2em; color: #666;">Siete</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('eight')">
+                    <div class="number-circle">8</div>
+                    <div class="number-name">Eight</div>
+                    <div style="font-size: 1.2em; color: #666;">Ocho</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('nine')">
+                    <div class="number-circle">9</div>
+                    <div class="number-name">Nine</div>
+                    <div style="font-size: 1.2em; color: #666;">Nueve</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('ten')">
+                    <div class="number-circle">10</div>
+                    <div class="number-name">Ten</div>
+                    <div style="font-size: 1.2em; color: #666;">Diez</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('eleven')">
+                    <div class="number-circle">11</div>
+                    <div class="number-name">Eleven</div>
+                    <div style="font-size: 1.2em; color: #666;">Once</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('twelve')">
+                    <div class="number-circle">12</div>
+                    <div class="number-name">Twelve</div>
+                    <div style="font-size: 1.2em; color: #666;">Doce</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('thirteen')">
+                    <div class="number-circle">13</div>
+                    <div class="number-name">Thirteen</div>
+                    <div style="font-size: 1.2em; color: #666;">Trece</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('fourteen')">
+                    <div class="number-circle">14</div>
+                    <div class="number-name">Fourteen</div>
+                    <div style="font-size: 1.2em; color: #666;">Catorce</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('fifteen')">
+                    <div class="number-circle">15</div>
+                    <div class="number-name">Fifteen</div>
+                    <div style="font-size: 1.2em; color: #666;">Quince</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('sixteen')">
+                    <div class="number-circle">16</div>
+                    <div class="number-name">Sixteen</div>
+                    <div style="font-size: 1.2em; color: #666;">Dieciséis</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('seventeen')">
+                    <div class="number-circle">17</div>
+                    <div class="number-name">Seventeen</div>
+                    <div style="font-size: 1.2em; color: #666;">Diecisiete</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('eighteen')">
+                    <div class="number-circle">18</div>
+                    <div class="number-name">Eighteen</div>
+                    <div style="font-size: 1.2em; color: #666;">Dieciocho</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('nineteen')">
+                    <div class="number-circle">19</div>
+                    <div class="number-name">Nineteen</div>
+                    <div style="font-size: 1.2em; color: #666;">Diecinueve</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="number-card" onclick="playNumberSound('twenty')">
+                    <div class="number-circle">20</div>
+                    <div class="number-name">Twenty</div>
+                    <div style="font-size: 1.2em; color: #666;">Veinte</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Emotions Section -->
+        <div class="section">
+            <h2>😊 Emotions - Emociones</h2>
+            <div class="emotions-grid">
+                <div class="emotion-card" onclick="playEmotionSound('happy')">
+                    <div class="emotion-face">😊</div>
+                    <div class="emotion-name" style="color: #2ecc71;">Happy</div>
+                    <div style="font-size: 1.3em; color: #666;">Feliz</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="emotion-card" onclick="playEmotionSound('sad')">
+                    <div class="emotion-face">😢</div>
+                    <div class="emotion-name" style="color: #3498db;">Sad</div>
+                    <div style="font-size: 1.3em; color: #666;">Triste</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="emotion-card" onclick="playEmotionSound('angry')">
+                    <div class="emotion-face">😠</div>
+                    <div class="emotion-name" style="color: #e74c3c;">Angry</div>
+                    <div style="font-size: 1.3em; color: #666;">Enojado</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="emotion-card" onclick="playEmotionSound('love')">
+                    <div class="emotion-face">😍</div>
+                    <div class="emotion-name" style="color: #e91e63;">Love</div>
+                    <div style="font-size: 1.3em; color: #666;">Amor</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Food Section -->
+        <div class="section">
+            <h2>🍎 Food - Comida</h2>
+            <div class="food-grid">
+                <div class="food-card" onclick="playFoodSound('cookie')">
+                    <div class="food-icon">🍪</div>
+                    <div class="food-name" style="color: #8b4513;">Cookie</div>
+                    <div style="font-size: 1.2em; color: #666;">Galleta</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="food-card" onclick="playFoodSound('milk')">
+                    <div class="food-icon">🥛</div>
+                    <div class="food-name" style="color: #34495e;">Milk</div>
+                    <div style="font-size: 1.2em; color: #666;">Leche</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="food-card" onclick="playFoodSound('apple')">
+                    <div class="food-icon">🍎</div>
+                    <div class="food-name" style="color: #e74c3c;">Apple</div>
+                    <div style="font-size: 1.2em; color: #666;">Manzana</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="food-card" onclick="playFoodSound('pear')">
+                    <div class="food-icon">🍐</div>
+                    <div class="food-name" style="color: #27ae60;">Pear</div>
+                    <div style="font-size: 1.2em; color: #666;">Pera</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="food-card" onclick="playFoodSound('orange')">
+                    <div class="food-icon">🍊</div>
+                    <div class="food-name" style="color: #f39c12;">Orange</div>
+                    <div style="font-size: 1.2em; color: #666;">Naranja</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="food-card" onclick="playFoodSound('banana')">
+                    <div class="food-icon">🍌</div>
+                    <div class="food-name" style="color: #f1c40f;">Banana</div>
+                    <div style="font-size: 1.2em; color: #666;">Plátano</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Body Parts Section -->
+        <div class="section">
+            <h2>👀 Body Parts - Partes del Cuerpo</h2>
+            <div class="body-grid">
+                <div class="body-card" onclick="playBodySound('eyes')">
+                    <div class="body-icon">👀</div>
+                    <div class="body-name" style="color: #3498db;">Eyes</div>
+                    <div style="font-size: 1.2em; color: #666;">Ojos</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="body-card" onclick="playBodySound('ear')">
+                    <div class="body-icon">👂</div>
+                    <div class="body-name" style="color: #e67e22;">Ear</div>
+                    <div style="font-size: 1.2em; color: #666;">Oreja</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+                
+                <div class="body-card" onclick="playBodySound('mouth')">
+                    <div class="body-icon">👄</div>
+                    <div class="body-name" style="color: #e74c3c;">Mouth</div>
+                    <div style="font-size: 1.2em; color: #666;">Boca</div>
+                    <button class="play-button">🔊 Listen</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Game Section -->
+<div class="section game-section">
+    <h2>🎮 Fun Quiz Game!</h2>
+    <div class="stars">⭐⭐⭐</div>
+    <div id="quiz-area">
+        <div class="quiz-question" id="quiz-question">Click "Start Game" to begin!</div>
+        <div id="quiz-options"></div>
+        <button class="quiz-button" onclick="startQuiz()" id="start-button">Start Game</button>
+    </div>
+</div>
+    <div class="feedback" id="feedback"></div>
+    
+    <script>
+// Sound synthesis for pronunciation
+function speak(text) {
+    if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = isSpanish ? 'es-ES' : 'en-US';
+        utterance.rate = 0.8;
+        utterance.pitch = 1.2;
+        speechSynthesis.speak(utterance);
+    }
+}
+
+// Feedback display
+function showFeedback(message) {
+    const feedback = document.getElementById('feedback');
+    feedback.textContent = message;
+    feedback.style.display = 'block';
+    
+    setTimeout(() => {
+        feedback.style.display = 'none';
+    }, 2000);
+}
+
+// Sound functions for each section
+function playNumberSound(number) {
+    const text = number; // Always in English
+    speak(text);
+    showFeedback(isSpanish ? `¡Genial! ¡Clic en ${text}!` : `Great! You clicked ${number}!`);
+}
+
+function playEmotionSound(emotion) {
+    const text = emotion; // Always in English
+    speak(text);
+    showFeedback(isSpanish ? `¡Excelente! ¡Clic en ${text}!` : `Excellent! You clicked ${emotion}!`);
+}
+
+function playFoodSound(food) {
+    const text = food; // Always in English
+    speak(text);
+    showFeedback(isSpanish ? `¡Delicioso! ¡Clic en ${text}!` : `Yummy! You clicked ${food}!`);
+}
+
+function playBodySound(bodyPart) {
+    const text = bodyPart; // Always in English
+    speak(text);
+    showFeedback(isSpanish ? `¡Perfecto! ¡Clic en ${text}!` : `Perfect! You clicked ${bodyPart}!`);
+}
+
+// Add event listeners to Listen buttons
+function initializeListenButtons() {
+    // Numbers
+    document.querySelectorAll('.number-card .play-button').forEach(button => {
+        const card = button.closest('.number-card');
+        const number = card.getAttribute('onclick').match(/'([^']+)'/)[1];
+        button.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent card click event
+            const text = number; // Always in English
+            speak(text);
+            showFeedback(isSpanish ? `¡Escuchaste ${text}!` : `You listened to ${number}!`);
+        });
+    });
+
+    // Emotions
+    document.querySelectorAll('.emotion-card .play-button').forEach(button => {
+        const card = button.closest('.emotion-card');
+        const emotion = card.getAttribute('onclick').match(/'([^']+)'/)[1];
+        button.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const text = emotion; // Always in English
+            speak(text);
+            showFeedback(isSpanish ? `¡Escuchaste ${text}!` : `You listened to ${emotion}!`);
+        });
+    });
+
+    // Food
+    document.querySelectorAll('.food-card .play-button').forEach(button => {
+        const card = button.closest('.food-card');
+        const food = card.getAttribute('onclick').match(/'([^']+)'/)[1];
+        button.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const text = food; // Always in English
+            speak(text);
+            showFeedback(isSpanish ? `¡Escuchaste ${text}!` : `You listened to ${food}!`);
+        });
+    });
+
+    // Body Parts
+    document.querySelectorAll('.body-card .play-button').forEach(button => {
+        const card = button.closest('.body-card');
+        const bodyPart = card.getAttribute('onclick').match(/'([^']+)'/)[1];
+        button.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const text = bodyPart; // Always in English
+            speak(text);
+            showFeedback(isSpanish ? `¡Escuchaste ${text}!` : `You listened to ${bodyPart}!`);
+        });
+    });
+}
+
+// Quiz game logic
+let currentQuestion = 0;
+let isSpanish = false;
+let score = 0;
+
+const questions = [
+    {
+        question: "What comes after five?",
+        questionSpanish: "¿Qué viene después de cinco?",
+        options: ["Six", "Four", "Seven"],
+        correct: 0,
+        answer: "Six"
+    },
+    {
+        question: "How do you feel when you smile?",
+        questionSpanish: "¿Cómo te sientes cuando sonríes?",
+        options: ["Sad", "Happy", "Angry"],
+        correct: 1,
+        answer: "Happy"
+    },
+    {
+        question: "What fruit is yellow and long?",
+        questionSpanish: "¿Qué fruta es amarilla y larga?",
+        options: ["Apple", "Banana", "Orange"],
+        correct: 1,
+        answer: "Banana"
+    },
+    {
+        question: "What do you use to see?",
+        questionSpanish: "¿Qué usas para ver?",
+        options: ["Ear", "Mouth", "Eyes"],
+        correct: 2,
+        answer: "Eyes"
+    },
+    {
+        question: "What number comes before ten?",
+        questionSpanish: "¿Qué número viene antes de diez?",
+        options: ["Eight", "Nine", "Eleven"],
+        correct: 1,
+        answer: "Nine"
+    },
+    {
+        question: "What do you drink that is white?",
+        questionSpanish: "¿Qué bebes que es blanco?",
+        options: ["Milk", "Cookie", "Apple"],
+        correct: 0,
+        answer: "Milk"
+    },
+    {
+        question: "What do you use to hear?",
+        questionSpanish: "¿Qué usas para escuchar?",
+        options: ["Eyes", "Ear", "Mouth"],
+        correct: 1,
+        answer: "Ear"
+    },
+    {
+        question: "What number comes after nineteen?",
+        questionSpanish: "¿Qué número viene después de diecinueve?",
+        options: ["Eighteen", "Twenty", "Seventeen"],
+        correct: 1,
+        answer: "Twenty"
+    }
+];
+
+function toggleLanguage() {
+    isSpanish = !isSpanish;
+    updateLanguage();
+}
+
+function updateLanguage() {
+    const mainTitle = document.getElementById('main-title');
+    const startButton = document.getElementById('start-button');
+    const quizQuestion = document.getElementById('quiz-question');
+
+    // Update main title
+    mainTitle.textContent = isSpanish 
+        ? '🔢 ¡Aprende Inglés: Números, Emociones, Comida y Cuerpo! 🔢'
+        : '🔢 Learn English Numbers, Emotions, Food & Body! 🔢';
+
+    // Update quiz question and start button
+    if (currentQuestion === 0) {
+        quizQuestion.textContent = isSpanish 
+            ? '¡Haz clic en "Comenzar Juego" para empezar!' 
+            : 'Click "Start Game" to begin!';
+        startButton.textContent = isSpanish ? 'Comenzar Juego' : 'Start Game';
+    } else {
+        const q = questions[currentQuestion];
+        quizQuestion.textContent = isSpanish ? q.questionSpanish : q.question;
+    }
+
+    // Update translate button text
+    document.querySelector('.translate-button').textContent = isSpanish ? '🌍 Español/English' : '🌍 English/Español';
+}
+
+function startQuiz() {
+    currentQuestion = 0;
+    score = 0;
+    showQuestion();
+}
+
+function showQuestion() {
+    const quizQuestion = document.getElementById('quiz-question');
+    const quizOptions = document.getElementById('quiz-options');
+    const startButton = document.getElementById('start-button');
+
+    if (currentQuestion >= questions.length) {
+        quizQuestion.textContent = isSpanish 
+            ? `¡Juego terminado! Puntuación: ${score}/${questions.length}` 
+            : `Game Over! Score: ${score}/${questions.length}`;
+        quizOptions.innerHTML = '';
+        startButton.style.display = 'block';
+        startButton.textContent = isSpanish ? 'Jugar de Nuevo' : 'Play Again';
+        return;
+    }
+
+    startButton.style.display = 'none';
+    const q = questions[currentQuestion];
+    quizQuestion.textContent = isSpanish ? q.questionSpanish : q.question;
+    quizOptions.innerHTML = '';
+
+    q.options.forEach((option, index) => {
+        const button = document.createElement('button');
+        button.className = 'quiz-button';
+        button.textContent = option; // Options always in English
+        button.onclick = () => checkAnswer(index, q.correct, q.answer);
+        quizOptions.appendChild(button);
+    });
+}
+
+function checkAnswer(selected, correct, answer) {
+    if (selected === correct) {
+        score++;
+        showFeedback(isSpanish ? `¡Correcto! Es ${answer}!` : `Correct! It's ${answer}!`);
+        speak(answer);
+    } else {
+        showFeedback(isSpanish ? `¡Inténtalo de nuevo! La respuesta es ${answer}.` : `Try again! The answer is ${answer}.`);
+        speak(answer);
+    }
+    currentQuestion++;
+    setTimeout(showQuestion, 2000);
+}
+
+// Initialize language and listen buttons on page load
+document.addEventListener('DOMContentLoaded', () => {
+    updateLanguage();
+    initializeListenButtons();
+});
+</script>
+</body>
+</html>
